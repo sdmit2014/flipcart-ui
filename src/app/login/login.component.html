@@ -1,0 +1,27 @@
+<body>
+  <div class="container">
+    <h2>Login </h2>
+    <form [formGroup]="loginform" (ngSubmit)="loginForm();">
+      <div class="form-group">
+        <b> <label for="exampleUserName">Username <sup style="color: red;">*</sup>&nbsp; :</label></b>
+        <input type="text" class="form-control" aria-describedby="emailHelp" formControlName="username"
+          placeholder="Enter username">
+        <span *ngIf="loginform.get('username')?.touched && loginform.get('username')?.hasError('required')">
+          Username should not be empty</span>
+      </div><br>
+      <div class="form-group">
+        <b> <label for="examplePassword">Password<sup style="color: red;">*</sup>&nbsp; :</label></b>
+        <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="password"
+          placeholder="Enter password">
+        <span *ngIf="loginform.get('password')?.touched && loginform.get('password')?.hasError('required')">
+          password should not be empty</span>
+      </div><br>
+      <button mat-button type="submit" class="btn btn-info" [disabled]="!loginform.valid">Login</button>&nbsp;
+      <button mat-raised-button type="button" class="btn btn-warning" (click)="resetForm();">Reset</button>&nbsp;
+      <a class="nav-link" href="register">Don't have an account ? Sign up</a>
+
+      <!--- <a routerLink="/main" class="btn btn-info">Back</a> !-->
+
+    </form>
+  </div>
+</body>

@@ -1,0 +1,32 @@
+.navbar-dark{
+    background-color: rgba(80, 2, 63, 0.719);
+    
+}
+body{
+	background:url("pic.jpg");
+	background-size:150%;
+	background-position:-150px 0px;
+}
+.sidebar{
+    background-color: rgb(2, 78, 88);
+    max-height: 600px;
+    overflow-y: scroll;
+}
+.list-group-item{
+    background-color: transparent;
+    color:#fdf9f9;
+}
+.table{
+    background-color: #dacdb3;
+}
+.main-content{
+    background-color:#f5f3f3;
+}
+.footer{
+    background-color:rgb(88, 2, 67);
+    color: rgb(247, 240, 240);
+    height: 40px;
+    width:initial;
+    text-align:center;
+    text-decoration-color: black;
+}

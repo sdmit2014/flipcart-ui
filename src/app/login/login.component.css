@@ -1,0 +1,61 @@
+input.ng-touched.ng-invalid{
+border: 1px solid red;
+}
+body{
+	background:url("pic.jpg");
+	background-size:112%;
+	background-position:-10px 0px;
+	margin-top: 0%;
+	overflow-y: scroll;
+	overflow: hidden;
+
+}
+h2{
+	text-align:center;
+	padding:20px;
+	font-family:sans-serif;
+    text-shadow:1px 1px 5px rgba(0,0,0,0.3);
+}
+btn#submit{
+	width:200px;
+	padding:7px;
+	font-size:16px;
+	font-family:sans-serif;
+	font-weight:600;
+	border-radius:3px;
+	background-color:rgba(250,100,0,0.8);
+	color:#fff;
+	cursor:pointer;
+	border:1px solid rgba(255,255,255,0.3);
+	box-shadow:1px 1px 5px rgba(0,0,0,0.3);
+}
+a{
+    color: rgb(233, 225, 225);
+    font-family: Arial, Helvetica, sans-serif;
+}
+label{
+	text-shadow:1px 1px 5px rgba(0,0,0,0.3);
+}
+div.form{
+	margin-top: 0px;
+}
+div.container{
+    margin-top: 100px;
+	background-color:rgba(0,0,0,0.5);;
+	width:32%;
+	font-size:16px;
+	border-radius:15px;
+	border: 2px solid rgba(5, 4, 4, 0.3);
+	box-shadow:8px 8px 30px #f12c2c00;
+    color:#fff;
+
+}
+.navbar-light{
+    background-color: hsl(59, 97%, 63%);;
+}
+form.loginform{
+	margin-top: 10px;
+}
+
+
+

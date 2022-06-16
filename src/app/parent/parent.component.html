@@ -1,0 +1,21 @@
+<!-------------parent to child--------------------->
+
+<div>
+    <h1 class="text-centre">Super Copmponent</h1>
+    <input type="text" #food>
+    <button (click)="sendData(food.value)"> submit</button>
+    <app-child [cname]="name"></app-child>
+</div>
+
+<!-------------child to parent--------------------->
+
+<!-- <div>
+    <h1 class="text-centre">Super Copmponent</h1>
+    <h3>Data from child : {{childData}} </h3>
+    <app-child (notify)="parentData($event)"></app-child>
+</div> -->
+
+<!------------- Non-Related component data communication --------------------->
+
+<!-- <app-header></app-header><br>
+<app-body></app-body> -->

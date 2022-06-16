@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Ranaking</th>
+                    <th>Name</th>
+                    <th>Team</th>
+                    <th>Nationality</th>
+                </tr>
+                <tr *ngFor="let details of players">
+                    <td>{{details.ranking}}</td>
+                    <td>{{details.name}}</td>
+                    <td>{{details.team}}</td>
+                    <td>{{details.nationality}}</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>

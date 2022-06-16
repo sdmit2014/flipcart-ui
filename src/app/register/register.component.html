@@ -1,0 +1,39 @@
+<body>
+    <div class="container">
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+          </svg>
+          Register</h2>
+        <form [formGroup]="registerform" (ngSubmit)="registerForm();">
+            <div class="form-group">
+                <b> <label for="exampleFirstName">Username <sup style="color: red;">*</sup>&nbsp; :</label></b>
+                <input type="text" placeholder="username" class="form-control" id="exampleFirstName" aria-describedby="emailHelp"
+                    formControlName="username">
+                <span
+                    *ngIf="registerform.get('username')?.touched && registerform.get('username')?.hasError('required')">
+                    Username should not be empty</span>
+            </div><br>
+            <div class="form-group">
+                <b> <label for="exampleLastName">Password<sup style="color: red;">*</sup>&nbsp; :</label></b>
+                <input type="email" class="form-control" id="exampleLastName" aria-describedby="emailHelp"
+                    formControlName="password">
+                <span
+                    *ngIf="registerform.get('password')?.touched && registerform.get('password')?.hasError('required')">
+                    password should not be empty</span>
+            </div><br>
+            <div class="form-group">
+                <b> <label for="exampleLastName">Mobilenumber<sup style="color: red;">*</sup>&nbsp; :</label></b>
+                <input type="email" class="form-control" id="exampleLastName" aria-describedby="emailHelp"
+                    formControlName="mobilenumber">
+                <span
+                    *ngIf="registerform.get('mobilenumber')?.touched && registerform.get('mobilenumber')?.hasError('required')">
+                    mobilenumber should not be empty</span>
+            </div><br>
+            <button type="submit" class="btn btn-primary" [disabled]="!registerform.valid">Submit</button>&nbsp;
+            <button type="button" class="btn btn-danger" (click)="resetForm();">Reset</button><br><br>
+            <!--- <a routerLink="/main" class="btn btn-info">Back</a> !-->
+        </form>
+    </div>
+</body>

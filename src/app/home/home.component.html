@@ -1,0 +1,103 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class=" container-fluid">
+      <a class="navbar-brand" href="#">Flipcart</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Fashion</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              WishList
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">My cart</a></li>
+              <li><a class="dropdown-item" href="#">My Wishlist</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Wishlist and Collections</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Payment</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <!--input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"-->
+         
+          <button class="btn btn-outline-warning" type="submit" (click)="getBack()">Logout</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
+
+  </div><!--./container-fluid-->
+
+<div class="container-fluid">
+<div class="row">
+ <div class="col-2 sidebar">
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-dark fa fa home">All Category</li>
+    <li class="list-group-item list-group-item-dark">Flipcart Zone</li>
+    <li class="list-group-item list-group-item-dark">More on Flipcart</li>
+    <li class="list-group-item list-group-item-dark">Languges</li>
+    <li class="list-group-item list-group-item-dark">Offer Zone</li>
+    <li class="list-group-item list-group-item-dark">Sell on Flipcart</li>
+    <li class="list-group-item list-group-item-dark">My Order</li>
+    <li class="list-group-item list-group-item-dark">My Rewards</li>
+    <li class="list-group-item list-group-item-dark">My Cart</li>
+    <li class="list-group-item list-group-item-dark">My Account</li>
+    <li class="list-group-item list-group-item-dark">My Notification</li>
+    <li class="list-group-item list-group-item-dark">Help</li>
+    <li class="list-group-item list-group-item-dark">Privacy Policy</li>
+    <li class="list-group-item list-group-item-dark">Legal</li>
+    <li class="list-group-item list-group-item-dark">My Chats</li>
+    <li class="list-group-item list-group-item-dark">Help Centre</li>
+    <li class="list-group-item list-group-item-dark">Beauty</li>
+    <li class="list-group-item list-group-item-dark">Toys Baby</li>
+    <li class="list-group-item list-group-item-dark">Flights</li>
+    <li class="list-group-item list-group-item-dark">sports</li>
+    </ul>
+ </div><!--./col-3-->
+ <div class="col-10 main-content p-4">
+  <h3 class="mb-4">MARKET PLACE</h3>
+
+<div class="row">
+   <button mat-raised-button  class="col-2 btn btn-warning mb-4" (click)="getApiData()">Show Members</button>
+   
+  <div class="col-10" align="right">
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+      <button mat-raised-button  type="button" class="btn btn-info" (click)="addApiData()">Add Members</button>
+      <button mat-raised-button  type="button" class="btn btn-danger">Downoad</button>
+      <button mat-raised-button  type="button" class="btn btn-success">Print</button>
+    </div>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Username</th>
+      <th scope="col">Password</th>
+      <th scope="col">Mobilenumber</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of data">
+      <td>{{d.id}}</td>
+      <td>{{d.username}}</td>
+      <td>{{d.password}}</td>
+      <td>{{d.mobilenumber}}</td>
+    </tr>
+  </tbody>
+</table>
+ </div><!--./col-9-->
+ 
+
+</div><!--./row-->
+</div><!--./container-fluid-->
