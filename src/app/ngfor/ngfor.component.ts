@@ -10,7 +10,7 @@ export class NgforComponent implements OnInit {
   players: any;
 
   constructor() { }
-
+// 
   ngOnInit(): void {
 
     this.players = [
