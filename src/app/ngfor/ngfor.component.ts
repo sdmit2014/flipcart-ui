@@ -34,8 +34,8 @@ export class NgforComponent implements OnInit {
       },
       {
         "ranking": 4,
-        "name": "Benzima",
-        "team": "Real Madrid",
+        "name": "Levendoski",
+        "team": "Bayern Munic",
         "nationality": "France"
       }
     ]
