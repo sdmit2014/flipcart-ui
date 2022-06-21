@@ -9,6 +9,18 @@ export class NgforComponent implements OnInit {
 
   players: any;
 
+  playersname ="";
+
+  months=10;
+
+  uppercaseEx = "list of players"
+
+  lowercaseEx = "SEARCH"
+
+  dateEx = Date.now();
+
+  currencyEx = 1500;
+
   constructor() { }
 // 
   ngOnInit(): void {

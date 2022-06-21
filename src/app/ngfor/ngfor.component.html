@@ -1,5 +1,19 @@
 <div class="container-fluid">
+    <h1>Players Ranking</h1>
     <div class="container">
+
+        <!--Example for built in pipe(Date)-->
+        <h4>{{ dateEx | date }}</h4>
+
+        <!--Example for built in pipe(lowercase)-->
+        <div>{{ lowercaseEx | lowercase }}</div>
+
+        <!--Example for Two way data binding(Banana bracket)-->
+        <input [(ngModel)]="playersname" />&nbsp;
+        <div *ngIf="months >= 10"> {{playersname}} </div><br>
+
+        <!--Example for built in pipe(uppercase)-->
+        <div> {{ uppercaseEx | uppercase }}</div>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -7,12 +21,14 @@
                     <th>Name</th>
                     <th>Team</th>
                     <th>Nationality</th>
+                    <th>Net Worth</th>
                 </tr>
                 <tr *ngFor="let details of players">
                     <td>{{details.ranking}}</td>
                     <td>{{details.name}}</td>
                     <td>{{details.team}}</td>
                     <td>{{details.nationality}}</td>
+                    <td>{{ currencyEx | currency }}</td><!--Example for built in pipe(currency)-->
                 </tr>
             </thead>
         </table>
