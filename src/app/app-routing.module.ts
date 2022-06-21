@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: '',
     component: NgforComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard] //route guard added to this component 
   },
   { path: 'rxjs', component: RxjsComponent },
   { path: 'parent', component: ParentComponent },
