@@ -21,6 +21,8 @@ export class NgforComponent implements OnInit {
 
   currencyEx = 1500;
 
+  currencyEx2 = 250;
+
   constructor() { }
 // 
   ngOnInit(): void {

@@ -3,7 +3,14 @@
     <div class="container">
 
         <!--Example for built in pipe(Date)-->
-        <h4>{{ dateEx | date }}</h4>
+        <!-- <h4>{{ dateEx | date }}</h4> -->
+
+        <!--Example for Parameterized pipe(Date)-->
+        <!-- <h4>{{ dateEx | date : 'long' }}</h4> -->
+
+        <!--Example for Chaining pipe(Date)-->
+        <h4>{{dateEx | date : 'long' | uppercase }}</h4>
+
 
         <!--Example for built in pipe(lowercase)-->
         <div>{{ lowercaseEx | lowercase }}</div>
@@ -22,13 +29,15 @@
                     <th>Team</th>
                     <th>Nationality</th>
                     <th>Net Worth</th>
+                    <th>Market Value</th>
                 </tr>
                 <tr *ngFor="let details of players">
                     <td>{{details.ranking}}</td>
-                    <td>{{details.name}}</td>
+                    <td [innerHTML]="details.name | highlight:details.name"></td>
                     <td>{{details.team}}</td>
                     <td>{{details.nationality}}</td>
                     <td>{{ currencyEx | currency }}</td><!--Example for built in pipe(currency)-->
+                    <td>{{ currencyEx2 | currency : 'EUR'}}</td><!--Example for parameterized pipe(currency)-->
                 </tr>
             </thead>
         </table>

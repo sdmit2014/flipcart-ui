@@ -19,6 +19,7 @@ import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { NgforComponent } from './ngfor/ngfor.component';
+import { HighlightPipe } from './highlight.pipe';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NgforComponent } from './ngfor/ngfor.component';
     BodyComponent,
     RxjsComponent,
     NgforComponent,
+    HighlightPipe,
   ],
   imports: [
     BrowserModule,
