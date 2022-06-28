@@ -1,6 +1,6 @@
-export class Cart{
-    username:string;
+export class Register{
+    userName:string;
     password:string;
-    mobilenumber:string;
+    mobileNumber:string;
    constructor(){}
 }

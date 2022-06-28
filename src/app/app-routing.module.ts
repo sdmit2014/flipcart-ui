@@ -11,14 +11,14 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'ngfor',
     component: NgforComponent,
     canActivate: [AuthGuard] //route guard added to this component 
   },
   { path: 'rxjs', component: RxjsComponent },
   { path: 'parent', component: ParentComponent },
   { path: 'child', component: ChildComponent },
-  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'register', component: RegisterComponent },
 ];

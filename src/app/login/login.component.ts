@@ -3,7 +3,7 @@ import { FormControl, FormBuilder, FormGroup, Validators, } from '@angular/forms
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { RegisterService } from '../Service/register.api';
-import { Cart } from '../Service/register.model';
+import { Register } from '../Service/register.model';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { Cart } from '../Service/register.model';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  cart = new Cart();
+  cart = new Register();
 
   loginform: FormGroup;
   constructor(private formbuilder: FormBuilder, private service: RegisterService, private toastr: ToastrService, private router: Router) {

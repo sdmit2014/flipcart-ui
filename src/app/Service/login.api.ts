@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http'
-import { Cart } from './register.model';
+import { Register } from './register.model';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-  sendDetails(cart: Cart) {
+  sendDetails(login: Register) {
     throw new Error('Method not implemented.');
   }
 
