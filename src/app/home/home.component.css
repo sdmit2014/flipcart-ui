@@ -6,10 +6,11 @@ body{
 	background:url("pic.jpg");
 	background-size:150%;
 	background-position:-150px 0px;
+    max-height: 700px;
 }
 .sidebar{
     background-color: rgb(2, 78, 88);
-    max-height: 600px;
+    max-height: 800px;
     overflow-y: scroll;
 }
 .list-group-item{
@@ -21,6 +22,7 @@ body{
 }
 .main-content{
     background-color:#f5f3f3;
+    max-height: 700px;
 }
 .footer{
     background-color:rgb(88, 2, 67);

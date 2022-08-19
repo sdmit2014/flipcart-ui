@@ -1,23 +1,28 @@
 <body>
     <div class="container">
         <h2>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-          </svg>
-          Register</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                <path fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+            </svg>
+            Register
+        </h2>
+        <!-- <img src="./assets/images/A_title.jpg" alt="Logo" height="00%" width="45%"
+        style="padding-top: 10px" /> -->
         <form [formGroup]="registerform" (ngSubmit)="registerForm();">
             <div class="form-group">
                 <b> <label for="exampleFirstName">Username <sup style="color: red;">*</sup>&nbsp; :</label></b>
-                <input type="text" placeholder="userName" class="form-control" id="exampleFirstName" aria-describedby="emailHelp"
-                    formControlName="userName">
+                <input type="text" placeholder="Enter username" class="form-control" id="exampleFirstName"
+                    aria-describedby="emailHelp" formControlName="userName">
                 <span
                     *ngIf="registerform.get('userName')?.touched && registerform.get('userName')?.hasError('required')">
-                    UserName should not be empty</span>
+                    User name should not be empty</span>
             </div><br>
             <div class="form-group">
                 <b> <label for="exampleLastName">Password<sup style="color: red;">*</sup>&nbsp; :</label></b>
-                <input type="email" class="form-control" id="exampleLastName" aria-describedby="emailHelp"
+                <input type="email" placeholder="Enter password" class="form-control" id="exampleLastName" aria-describedby="emailHelp"
                     formControlName="password">
                 <span
                     *ngIf="registerform.get('password')?.touched && registerform.get('password')?.hasError('required')">
@@ -25,14 +30,31 @@
             </div><br>
             <div class="form-group">
                 <b> <label for="exampleLastName">Mobilenumber<sup style="color: red;">*</sup>&nbsp; :</label></b>
-                <input type="email" class="form-control" id="exampleLastName" aria-describedby="emailHelp"
+                <input type="email" placeholder="Enter Mobilenumber" class="form-control" id="exampleLastName" aria-describedby="emailHelp"
                     formControlName="mobileNumber">
                 <span
                     *ngIf="registerform.get('mobileNumber')?.touched && registerform.get('mobileNumber')?.hasError('required')">
                     mobilenumber should not be empty</span>
             </div><br>
+
+            <div class="form-group">
+                <b> <label for="exampleLastName">Date Of Birth<sup style="color: red;">*</sup>&nbsp; :</label></b>
+                <input type="date" placeholder="Select date of birth" class="form-control" aria-describedby="emailHelp"
+                    formControlName="dateOfBirth">
+                <span
+                    *ngIf="registerform.get('dateOfBirth')?.touched && registerform.get('dateOfBirth')?.hasError('required')">
+                    Date Of Birth should not be empty</span>
+            </div><br>
+
+            <!-- <div class="form-group">
+                <b><label>Gender</label></b>&nbsp;
+                <label class="radio"><input type="radio" class="form-control" formControlName="gender"  name="gender">Female</label>&nbsp;
+                <label class="radio"><input type="radio" class="form-control" formControlName="gender" name="gender">Male</label>
+            </div><br> -->
+            
             <button type="submit" class="btn btn-primary" [disabled]="!registerform.valid">Submit</button>&nbsp;
-            <button type="button" class="btn btn-danger" (click)="resetForm();">Reset</button><br><br>
+            <button type="button" class="btn btn-danger" (click)="resetForm();">Reset</button><br>
+            <a class="nav-link" href="">Already have an account ? Sign in</a>
             <!--- <a routerLink="/main" class="btn btn-info">Back</a> !-->
         </form>
     </div>

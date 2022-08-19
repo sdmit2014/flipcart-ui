@@ -2,12 +2,20 @@ input.ng-touched.ng-invalid{
 border: 1px solid red;
 }
 body{
-	background:url("pic.jpg");
-	background-size:112%;
-	background-position:-10px 0px;
+	background:url("shop4.jpg");
+	/* background-size:112%; */
+	/* background-position:-10px 0px; */
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 	margin-top: 0%;
 	overflow-y: scroll;
 	overflow: hidden;
+
+	/* background-image: url("../../../assets/images/A_ico1.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover; */
 
 }
 h2{
@@ -41,7 +49,8 @@ div.form{
 }
 div.container{
     margin-top: 100px;
-	background-color:rgba(0,0,0,0.5);;
+	/* background-color:rgba(0,0,0,0.5); */
+	background-color:rgba(0, 0, 0, 0.507);
 	width:32%;
 	font-size:16px;
 	border-radius:15px;

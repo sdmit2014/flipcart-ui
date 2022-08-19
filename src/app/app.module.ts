@@ -20,6 +20,8 @@ import { BodyComponent } from './body/body.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { NgforComponent } from './ngfor/ngfor.component';
 import { HighlightPipe } from './highlight.pipe';
+import { UserRecordComponent } from './user-record/user-record.component';
+import { UserFormComponent } from './modules/admin-module/user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { HighlightPipe } from './highlight.pipe';
     RxjsComponent,
     NgforComponent,
     HighlightPipe,
+    UserRecordComponent,
+    UserFormComponent,
   ],
   imports: [
     BrowserModule,

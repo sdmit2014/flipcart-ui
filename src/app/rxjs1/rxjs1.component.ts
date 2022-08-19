@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-rxjs',
-  templateUrl: './rxjs.component.html',
-  styleUrls: ['./rxjs.component.css']
+  selector: 'app-rxjs1',
+  templateUrl: './rxjs1.component.html',
+  styleUrls: ['./rxjs1.component.css']
 })
-export class RxjsComponent implements OnInit {
+export class RxjsComponent1 implements OnInit {
 
   agents: Observable<string>;
 
@@ -21,7 +21,6 @@ export class RxjsComponent implements OnInit {
           observer.next("Rajastan");
           observer.next("Bangalore");
         }
-        
         catch (e) {
           observer.error(e);
         }

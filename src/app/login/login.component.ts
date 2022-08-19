@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormBuilder, FormGroup, Validators, } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { RegisterService } from '../Service/register.api';
-import { Register } from '../Service/register.model';
+import { LoginService } from '../Service/login.api';
 
 
 @Component({
@@ -12,12 +11,15 @@ import { Register } from '../Service/register.model';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  cart = new Register();
+  // cart = new Regisr();
 
   loginform: FormGroup;
-  constructor(private formbuilder: FormBuilder, private service: RegisterService, private toastr: ToastrService, private router: Router) {
+  constructor(private formbuilder: FormBuilder,
+    private apiService: LoginService,
+    private toastr: ToastrService,
+    private router: Router) {
     this.loginform = this.formbuilder.group({
-      username: ['', Validators.required],
+      userName: ['', Validators.required],
       password: ['', Validators.required]
     })
   }
@@ -27,9 +29,9 @@ export class LoginComponent implements OnInit {
 
   loginForm() {
     console.log(this.loginform.value);
-    this.service.sendDetails(this.loginform.value).subscribe(response => {
-      console.log("login response :",response);
-      if (response.response === "SUCCESS") {
+    this.apiService.loginAuthentication(this.loginform.value).subscribe(response => {
+      console.log("login response :", response);
+      if (response.message === "Login Successfull") {
         this.toastr.success(response.message);
         this.router.navigate(['/home']);
       }

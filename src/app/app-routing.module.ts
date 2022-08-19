@@ -8,6 +8,7 @@ import { NgforComponent } from './ngfor/ngfor.component';
 import { ParentComponent } from './parent/parent.component';
 import { RegisterComponent } from './register/register.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { UserRecordComponent } from './user-record/user-record.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'user', component: UserRecordComponent },
 ];
 
 @NgModule({

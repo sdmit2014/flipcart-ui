@@ -1,0 +1,13 @@
+<p>fc-radio-button works!</p>
+<ng-container [formGroup]="parentForm ? parentForm : null">
+    <label [for]="label" class="we-form-label">{{label}}</label>
+    <label [for]="label" class="we-form-label" *ngIf="inputRequired" class="we-mandatory-field">&nbsp; *</label>
+    <br>
+    <div class="form-check form-check-inline" *ngFor="let data of dataArray">
+      <input class="form-check-input" [attr.disabled]="isDisabled ? '' : null" type="radio" [formControlName]="control ? control : null" [name]="control"
+        [value]="data.value" checked [required]="inputRequired" [disabled]="isDisabled" (change)="selectRadio(data)">
+      <label class="form-check-label we-form-label" for="exampleRadios1">
+        {{data.name}}
+      </label>
+    </div>
+  </ng-container>
